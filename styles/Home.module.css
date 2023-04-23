@@ -1,0 +1,57 @@
+/* 
+Color Palette: Mermaid Lagoon
+https://www.canva.com/colors/color-palettes/mermaid-lagoon/
+*/
+.root {
+    --mermaid-lagoon-baby-blue: #b1d4e0;
+    --mermaid-lagoon-blue: #2e8bc0;
+    --mermaid-lagoon-dark-blue: #0c2d48;
+    --mermaid-lagoon-midnight-blue: #145da0;
+}
+
+.title {
+    /* color: var(--mermaid-lagoon-midnight-blue); */
+}
+
+.taskList {
+    padding: 5px;
+    /* margin: 5px 0px; */
+    /* background-color: #f2f2f2; */
+    /* background-color: var(--mermaid-lagoon-baby-blue); */
+    /* border: 1px solid var(--mermaid-lagoon-blue); */
+    border-radius: 5px;
+}
+
+.task {
+    /* background-color: var(--mermaid-lagoon-baby-blue); */
+    background-color: var(--mermaid-lagoon-blue);
+    margin: 10px 0px;
+    padding: 10px;
+    /* border-top: 1px solid var(--mermaid-lagoon-dark-blue); */
+    /* border: 1px solid var(--mermaid-lagoon-blue); */
+    /* border: 1px solid var(--mermaid-lagoon-dark-blue); */
+    border-radius: 5px;
+}
+
+.taskTitle {
+    /* background-color: var(--mermaid-lagoon-baby-blue); */
+    background-color: var(--mermaid-lagoon-dark-blue);
+    color: white;
+    /* color: var(--mermaid-lagoon-baby-blue); */
+    padding: 10px;
+    border: 1px solid var(--mermaid-lagoon-dark-blue);
+    border-radius: 5px;
+}
+
+.taskDescription {
+    background-color: var(--mermaid-lagoon-baby-blue);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.taskDueDate {}
+
+.taskInfo {
+    font-size: small;
+    color: var(--mermaid-lagoon-baby-blue);
+}

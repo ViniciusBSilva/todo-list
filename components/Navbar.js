@@ -10,7 +10,13 @@ const Navbar = () => {
                 </Link>
             </div>
             <Link href="/">Home</Link>
-            <Link href="/create">New Task</Link>
+            <Link className="navButton" href="/create" style={{
+                backgroundColor: '#0c2d48',
+                color: "white",
+                borderRadius: '8px',
+                // border: '1px solid #0c2d48',
+                // fontWeight: 'bold'
+            }}>New Task</Link>
         </nav>
     );
 }
