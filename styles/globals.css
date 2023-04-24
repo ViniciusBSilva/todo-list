@@ -5,16 +5,16 @@ Color Palette: Mermaid Lagoon
 https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 */
 :root {
-    --mermaid-lagoon-baby-blue: #b1d4e0;
-    --mermaid-lagoon-blue: #2e8bc0;
-    --mermaid-lagoon-dark-blue: #0c2d48;
-    --mermaid-lagoon-midnight-blue: #145da0;
+    --000: #b1d4e0;
+    --100: #2e8bc0;
+    --200: #145da0;
+    --300: #0c2d48;
 }
 
 body {
     /* background-color: var(--mermaid-lagoon-baby-blue); */
     background-color: #f2f2f2;
-    color: var(--mermaid-lagoon-dark-blue);
+    color: var(--300);
     font-family: 'Inter', sans-serif;
 }
 
@@ -34,7 +34,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    border-bottom: 1px solid var(--mermaid-lagoon-dark-blue);
+    border-bottom: 1px solid var(--300);
 }
 
 nav a {
@@ -63,5 +63,5 @@ footer {
     margin-top: 20px;
     /* color: var(--mermaid-lagoon-blue); */
     color: #145da0;
-    border-top: 1px solid var(--mermaid-lagoon-dark-blue);
+    border-top: 1px solid var(--300);
 }

@@ -3,10 +3,10 @@ Color Palette: Mermaid Lagoon
 https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 */
 .root {
-    --mermaid-lagoon-baby-blue: #b1d4e0;
-    --mermaid-lagoon-blue: #2e8bc0;
-    --mermaid-lagoon-dark-blue: #0c2d48;
-    --mermaid-lagoon-midnight-blue: #145da0;
+    --000: #b1d4e0;
+    --100: #2e8bc0;
+    --200: #145da0;
+    --300: #0c2d48;
 }
 
 .title {
@@ -24,7 +24,7 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 
 .task {
     /* background-color: var(--mermaid-lagoon-baby-blue); */
-    background-color: var(--mermaid-lagoon-blue);
+    background-color: var(--100);
     margin: 10px 0px;
     padding: 10px;
     /* border-top: 1px solid var(--mermaid-lagoon-dark-blue); */
@@ -35,16 +35,16 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 
 .taskTitle {
     /* background-color: var(--mermaid-lagoon-baby-blue); */
-    background-color: var(--mermaid-lagoon-dark-blue);
+    background-color: var(--300);
     color: white;
     /* color: var(--mermaid-lagoon-baby-blue); */
     padding: 10px;
-    border: 1px solid var(--mermaid-lagoon-dark-blue);
+    border: 1px solid var(--300);
     border-radius: 5px;
 }
 
 .taskDescription {
-    background-color: var(--mermaid-lagoon-baby-blue);
+    background-color: var(--000);
     padding: 10px;
     border-radius: 5px;
 }
@@ -53,5 +53,5 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 
 .taskInfo {
     font-size: small;
-    color: var(--mermaid-lagoon-baby-blue);
+    color: var(--000);
 }
