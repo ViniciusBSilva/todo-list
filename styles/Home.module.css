@@ -21,8 +21,8 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 .task {
     background-color: var(--100);
     margin: 10px 0px;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .taskHeader {
@@ -49,6 +49,6 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 }
 
 .taskDescription {
-    background-color: var(--050);
-    padding: 3px;
+    background-color: var(--000);
+    padding: 5px;
 }

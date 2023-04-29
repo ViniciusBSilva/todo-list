@@ -20,7 +20,9 @@ const Task = ({ completed, title, description, category, dueDate, createdAt, cre
                         className={`${styles.taskTitle}`.concat((completed) ? ` ${styles.taskCompleted}` : '')}>
                         <h2>{title}</h2>
                     </label>
-                    <p className={styles.showDetails} onClick={() => toogleDetail(!showDetail)}>+</p>
+                    <p className={styles.showDetails} onClick={() => toogleDetail(!showDetail)}>
+                        {showDetail ? '-' : '+'}
+                    </p>
                 </div>
                 {showDetail && (
                     <div className={styles.taskDetails}>
