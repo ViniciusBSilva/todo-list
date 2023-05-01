@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import styles from '../styles/Home.module.css'
 
-const Task = ({ completed, title, description, category, dueDate, createdAt, createdBy, toogleCompleted }) => {
+const Task = ({ id, title, description, completed, category, dueDate, createdAt, createdBy, toogleCompleted }) => {
 
     const [showDetail, toogleDetail] = useState(false);
 
     return (
         <>
-            <div className={styles.task}>
+            <div className={styles.task} id={id}>
                 <div className={styles.taskHeader}>
                     <input
                         name='taskCompleted'

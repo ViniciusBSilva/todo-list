@@ -42,13 +42,7 @@ const getTaskList = () => {
 
         taskList.push(
             <Task
-                completed={completed}
-                title={task.title}
-                description={task.description}
-                category={task.category}
-                dueDate={task.dueDate}
-                createdAt={task.createdAt}
-                createdBy={task.createdBy}
+                taskData={task}
                 toogleCompleted={(event) => toogleCompleted(event.target.checked)}
             />
         );
