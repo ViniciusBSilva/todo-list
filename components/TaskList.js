@@ -1,49 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Task from '@/components/Task';
 import styles from '../styles/Home.module.css';
 
-// const getTaskListData = () => {
+const getTaskList = (taskListJSON) => {
 
-
-
-//     // return taskListData;
-// }
-
-const getTaskList = () => {
-
-    const taskListJSON = [
-        {
-            "id": 1,
-            "title": "Lorem Ipsum",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "completed": false,
-            "category": "Work",
-            "dueDate": "2023-05-02",
-            "createdAt": "2023-04-23",
-            "createdBy": "Vinicius"
-        },
-        {
-            "id": 2,
-            "title": "The Quick Brown Fox",
-            "description": "The quick brown fox jumps over the lazy dog",
-            "completed": true,
-            "category": "Personal",
-            "dueDate": "2023-12-31",
-            "createdAt": "2023-04-22",
-            "createdBy": "Vinicius"
-        }
-    ]
+    console.log("taskListJSON", taskListJSON);
 
     const taskList = [];
 
     taskListJSON.forEach(task => {
 
-        const [completed, toogleCompleted] = useState(task.completed);
-
         taskList.push(
             <Task
+                key={task.id}
                 taskData={task}
-                toogleCompleted={(event) => toogleCompleted(event.target.checked)}
             />
         );
 
@@ -55,7 +25,15 @@ const getTaskList = () => {
 
 const TaskList = () => {
 
-    const taskList = getTaskList();
+    const [taskList, setTaskList] = useState([]);
+
+    useEffect(() => {
+
+        fetch('http://localhost:3000/api/tasks')
+            .then(res => res.json())
+            .then(jsonData => setTaskList(getTaskList(jsonData)));
+
+    }, []);
 
     return (
         <div className={styles.taskList}>

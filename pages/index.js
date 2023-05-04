@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import TaskList from '@/components/Tasklist';
+import TaskList from '@/components/TaskList';
 
 export default function Home() {
 
