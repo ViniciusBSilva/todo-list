@@ -1,23 +1,27 @@
-import TaskDetail from "@/components/TaskDetail";
+import TaskDetailView from "@/components/TaskDetailView";
 import styles from '@/styles/Home.module.css';
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const TaskDetailsPage = () => {
 
-    const data = {
-        "id": 1,
-        "title": "Lorem Ipsum",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "completed": false,
-        "category": "Work",
-        "dueDate": "2023-05-02",
-        "createdAt": "2023-04-23",
-        "createdBy": "Vinicius"
-    }
+    const router = useRouter();
+    const { id } = router.query;
+
+    const [taskData, setTaskData] = useState({});
+
+    useEffect(() => {
+        if (id) {
+            fetch(`http://localhost:3000/api/tasks?id=${id}`)
+                .then(res => res.json())
+                .then(jsonData => setTaskData(jsonData));
+        }
+    }, [id]);
 
     return (
         <>
-            <TaskDetail
-                taskData={data}
+            <TaskDetailView
+                taskData={taskData}
             />
             <div className="btnLine">
                 <button className={styles.btnDelete}>Delete task</button>

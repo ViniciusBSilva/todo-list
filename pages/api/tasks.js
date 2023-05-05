@@ -2,6 +2,12 @@ const handler = async (req, res) => {
 
   let uri = 'http://localhost:8000/tasks';
 
+  const { id } = req.query;
+
+  if (id) {
+    uri += `/${id}`;
+  }
+
   try {
     const response = await fetch(uri);
     const data = await response.json();
