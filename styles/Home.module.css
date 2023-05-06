@@ -31,12 +31,16 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     align-items: center;
 }
 
-.showDetails {
+.taskListButtons {
     margin-right: 5px;
     margin-left: auto;
     color: white;
     font: 25px bolder;
     cursor: pointer;
+}
+
+.taskListButtonsItem {
+    margin: 2px;
 }
 
 .taskTitle {

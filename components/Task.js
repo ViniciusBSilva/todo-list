@@ -1,4 +1,11 @@
 import { useState } from 'react';
+
+import Link from 'next/link';
+
+import { FiPlusSquare } from "react-icons/fi";
+import { FiMinusSquare } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
+
 import styles from '../styles/Home.module.css'
 
 const Task = ({ taskData }) => {
@@ -22,8 +29,20 @@ const Task = ({ taskData }) => {
                         className={`${styles.taskTitle}`.concat((isCompleted) ? ` ${styles.taskCompleted}` : '')}>
                         <h2>{taskData.title}</h2>
                     </label>
-                    <p className={styles.showDetails} onClick={() => toogleDetail(!showDetail)}>
-                        {showDetail ? '-' : '+'}
+                    <p className={styles.taskListButtons}>
+                        <span
+                            className={styles.taskListButtonsItem}
+                        >
+                            <Link href={`tasks/${taskData.id}`}>
+                                <FiArrowUpRight />
+                            </Link>
+                        </span>
+                        <span
+                            className={styles.taskListButtonsItem}
+                            onClick={() => toogleDetail(!showDetail)}
+                        >
+                            {showDetail ? <FiMinusSquare /> : <FiPlusSquare />}
+                        </span>
                     </p>
                 </div>
                 {showDetail && (
