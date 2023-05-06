@@ -6,17 +6,12 @@ const Navbar = () => {
         <nav>
             <div className="logo">
                 <Link href="/">
-                    <Image src="/logo.png" alt="To-do List Logo" width={128} height={77}></Image>
+                    {/* <Image src="/logo.png" alt="To-do List Logo" width={128} height={77}></Image> */}
+                    <h1 className="logo">TODO</h1>
                 </Link>
             </div>
             <Link href="/">Home</Link>
-            <Link className="navButton" href="/create" style={{
-                backgroundColor: '#0c2d48',
-                color: "white",
-                borderRadius: '8px',
-                // border: '1px solid #0c2d48',
-                // fontWeight: 'bold'
-            }}>New Task</Link>
+            <Link className="navButton" href="/create">New Task</Link>
         </nav>
     );
 }

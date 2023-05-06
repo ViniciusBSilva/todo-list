@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 
 /* 
 Color Palette: Mermaid Lagoon
@@ -53,11 +54,10 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* .navButton {
-    background-color: 'white';
-    border-radius: '8px';
-    border: '1px solid #2e8bc0',
-} */
+.navButton {
+    font-weight: bold;
+    font-size: larger;
+}
 
 footer {
     display: block;
@@ -73,4 +73,14 @@ input {
     margin-right: 1em;
     accent-color: var(--300);
     border-color: var(--300);
+}
+
+.logo {
+    font-family: 'Bruno Ace', cursive;
+    font-size: xx-large;
+    margin: 0;
+}
+
+.logo a:hover {
+    text-decoration: none;
 }
