@@ -67,9 +67,9 @@ const TaskForm = ({ taskData, handleInputChange, handleSubmit, isPending }) => {
                     ' ' +
                     styles.taskFormButtonLine}
                 >
-                    {!isPending && <button className={styles.taskFormButtonSubmit}>Save</button>}
-                    {isPending && <button className={styles.taskFormButtonSubmit} disabled>Saving...</button>}
-                    <button type='reset' className={styles.taskFormButtonCancel}>Cancel</button>
+                    {!isPending && <button className={styles.btnHighlight}>Save</button>}
+                    {isPending && <button className={styles.btnHighlight} disabled>Saving...</button>}
+                    <button type='reset' className={styles.btnNormal}>Cancel</button>
                 </p>
             </form>
         </div>

@@ -1,7 +1,7 @@
 import TaskForm from '@/components/TaskForm';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import styles from '../styles/Home.module.css';
+import styles from '@/styles/Home.module.css';
 
 const taskCreate = () => {
 
@@ -59,14 +59,14 @@ const taskCreate = () => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newTaskData)
-        }).then(() => {
-            console.log("task created");
-            setIsPending(false);
-            router.back();
         })
+            .then(res => res.json())
+            .then((jsonData) => {
+                setIsPending(false);
+                router.replace(`/tasks/${jsonData.id}`);
+            })
 
     }
-
 
     return (
         <>

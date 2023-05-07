@@ -10,6 +10,21 @@ const TaskDetailsPage = () => {
 
     const [taskData, setTaskData] = useState({});
 
+    const handleEdit = () => {
+
+    }
+
+    const handleDelete = () => {
+
+        fetch(`http://localhost:3000/api/tasks?id=${id}`, {
+            method: "DELETE"
+        }).then(() => {
+            console.log('Task Deleted');
+            router.replace("/")
+        })
+
+    }
+
     useEffect(() => {
         if (id) {
             fetch(`http://localhost:3000/api/tasks?id=${id}`)
@@ -23,8 +38,9 @@ const TaskDetailsPage = () => {
             <TaskDetailView
                 taskData={taskData}
             />
-            <div className="btnLine">
-                <button className={styles.btnDelete}>Delete task</button>
+            <div className={styles.taskForm + ' ' + styles.taskFormButtonLine}>
+                <button className={styles.btnNormal} onClick={() => handleEdit()}>Edit task</button>
+                <button className={styles.btnNormal} onClick={() => handleDelete()}>Delete task</button>
             </div>
 
         </>

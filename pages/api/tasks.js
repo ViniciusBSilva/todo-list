@@ -19,6 +19,10 @@ const handler = async (req, res) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(req.body)
       });
+    } else if (req.method === "DELETE") {
+      response = await fetch(uri, {
+        method: req.method,
+      });
     }
 
     const data = await response.json();

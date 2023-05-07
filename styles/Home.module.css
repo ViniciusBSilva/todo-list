@@ -14,7 +14,6 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 }
 
 .taskList {
-    /* padding: 10px; */
     border-radius: 5px;
 }
 
@@ -81,10 +80,6 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     text-align: justify;
 }
 
-/* .taskFormContainer {
-    padding: 0 10px;
-} */
-
 .taskForm {
     display: flex;
     flex-direction: column;
@@ -121,13 +116,13 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     justify-content: space-evenly;
 }
 
-.taskFormButtonSubmit,
-.taskFormButtonCancel {
+.btnHighlight,
+.btnNormal {
     font-weight: bold;
     padding: 5px 10px;
 }
 
-.taskFormButtonSubmit {
+.btnHighlight {
     background-color: var(--300);
     color: var(--000);
 }

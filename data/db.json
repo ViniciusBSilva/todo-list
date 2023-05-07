@@ -21,28 +21,6 @@
       "createdAt": "2023-04-22",
       "createdBy": "Vinicius",
       "changedAt": "2023-04-22"
-    },
-    {
-      "title": "Resident Evil Review",
-      "description": "sdADSADfgsgSDa",
-      "completed": true,
-      "category": "TV",
-      "dueDate": "2023-05-04",
-      "createdAt": "2023-05-06",
-      "createdBy": "Vinicius",
-      "changedAt": "2023-05-06",
-      "id": 3
-    },
-    {
-      "title": "Test todo App",
-      "description": "test functions",
-      "completed": false,
-      "category": "DEV",
-      "dueDate": "2023-05-24",
-      "createdAt": "2023-05-06",
-      "createdBy": "Vinicius",
-      "changedAt": "2023-05-06",
-      "id": 4
     }
   ]
 }
