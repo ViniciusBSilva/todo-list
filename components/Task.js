@@ -13,6 +13,22 @@ const Task = ({ taskData }) => {
     const [showDetail, toogleDetail] = useState(false);
 
     const [isCompleted, toogleCompleted] = useState(taskData.completed);
+    const [isPending, setIsPending] = useState(false);
+
+    const handleCompleted = (isCompleted) => {
+        setIsPending(true);
+
+        fetch(`http://localhost:3000/api/tasks?id=${taskData.id}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ "completed": isCompleted })
+        })
+            .then(() => {
+                setIsPending(false);
+                toogleCompleted(isCompleted);
+            })
+
+    }
 
     return (
         <>
@@ -22,7 +38,8 @@ const Task = ({ taskData }) => {
                         name='taskCompleted'
                         type='checkbox'
                         checked={isCompleted}
-                        onChange={(event) => toogleCompleted(event.target.checked)}
+                        disabled={isPending}
+                        onChange={(event) => handleCompleted(event.target.checked)}
                     />
                     <label
                         htmlFor='taskCompleted'

@@ -13,7 +13,7 @@ const handler = async (req, res) => {
     let response;
     if (req.method === "GET") {
       response = await fetch(uri);
-    } else if (req.method === "POST" || req.method === "PUT") {
+    } else if (req.method === "POST" || req.method === "PUT" || req.method === "PATCH") {
       response = await fetch(uri, {
         method: req.method,
         headers: { "Content-Type": "application/json" },
