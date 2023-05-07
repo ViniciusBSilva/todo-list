@@ -66,6 +66,10 @@ const taskCreate = () => {
 
     }
 
+    const handleCancel = () => {
+        router.back();
+    }
+
     return (
         <>
             <h1 className={styles.title}>New Task</h1>
@@ -73,6 +77,7 @@ const taskCreate = () => {
                 taskData={taskData}
                 handleInputChange={handleInputChange}
                 handleSubmit={handleSubmit}
+                handleCancel={handleCancel}
                 isPending={isPending}
             />
         </>

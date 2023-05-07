@@ -1,8 +1,8 @@
 import styles from '@/styles/Home.module.css';
-const TaskForm = ({ taskData, handleInputChange, handleSubmit, isPending }) => {
+const TaskForm = ({ taskData, handleInputChange, handleSubmit, handleCancel, isPending }) => {
     return (
         <div className={styles.taskFormContainer}>
-            <form className={styles.taskForm} onSubmit={handleSubmit}>
+            <form className={styles.taskForm} onSubmit={handleSubmit} onReset={handleCancel}>
                 <p className={styles.taskFormLineColumn}>
                     <label htmlFor="title">Title</label>
                     <input

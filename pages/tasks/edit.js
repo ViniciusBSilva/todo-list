@@ -67,6 +67,10 @@ const taskEdit = () => {
 
     }
 
+    const handleCancel = () => {
+        router.replace(`/tasks/${id}`);
+    }
+
     return (
         <>
             <h1 className={styles.title}>Edit Task</h1>
@@ -74,6 +78,7 @@ const taskEdit = () => {
                 taskData={taskData}
                 handleInputChange={handleInputChange}
                 handleSubmit={handleSubmit}
+                handleCancel={handleCancel}
                 isPending={isPending}
             />
         </>
