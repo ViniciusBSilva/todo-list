@@ -33,7 +33,7 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 .taskListButtonsRowEnd {
     margin-right: 5px;
     margin-left: auto;
-    color: white;
+    /* color: white; */
     font: 25px bolder;
     cursor: pointer;
 }
@@ -41,7 +41,7 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 .taskListButtonsRowBegin {
     margin-right: 5px;
     margin-left: 5px;
-    color: white;
+    /* color: white; */
     font: 25px bolder;
     cursor: pointer;
 }
@@ -51,18 +51,27 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 }
 
 .taskTitle {
-    color: white;
+    /* color: white; */
 }
 
 .taskCompleted {
     text-decoration: line-through;
-    color: white;
+    /* color: white; */
     /* font-weight: 300; */
 }
 
 .taskDescription {
     background-color: var(--000);
-    padding: 5px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.taskDueDate {
+    /* color: var(--000); */
+}
+
+.taskInfo {
+    font-size: small;
 }
 
 .taskDetailPropertyList {

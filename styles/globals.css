@@ -64,8 +64,7 @@ footer {
     text-align: center;
     padding: 30px 0;
     margin-top: 20px;
-    /* color: var(--mermaid-lagoon-blue); */
-    color: #145da0;
+    color: var(--300);
     border-top: 1px solid var(--300);
 }
 
