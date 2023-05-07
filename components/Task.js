@@ -6,6 +6,10 @@ import { FiPlusSquare } from "react-icons/fi";
 import { FiMinusSquare } from "react-icons/fi";
 import { FiArrowUpRight } from "react-icons/fi";
 
+import { FiCircle } from "react-icons/fi";
+import { FiCheckCircle } from "react-icons/fi";
+
+
 import styles from '../styles/Home.module.css'
 
 const Task = ({ taskData }) => {
@@ -34,19 +38,32 @@ const Task = ({ taskData }) => {
         <>
             <div className={styles.task}>
                 <div className={styles.taskHeader}>
-                    <input
+                    {/* <input
                         name='taskCompleted'
                         type='checkbox'
+                        className={styles.taskCheckboxOverrideIcon}
                         checked={isCompleted}
                         disabled={isPending}
                         onChange={(event) => handleCompleted(event.target.checked)}
-                    />
+                    /> */}
+                    <p className={styles.taskListButtonsRowBegin}>
+                        <span
+                            className={styles.taskListButtonsItem}
+                            onClick={() => handleCompleted(!isCompleted)}
+                        >
+                            {
+                                isCompleted ?
+                                    <FiCheckCircle /> :
+                                    <FiCircle />
+                            }
+                        </span>
+                    </p>
                     <label
                         htmlFor='taskCompleted'
                         className={`${styles.taskTitle}`.concat((isCompleted) ? ` ${styles.taskCompleted}` : '')}>
                         <h2>{taskData.title}</h2>
                     </label>
-                    <p className={styles.taskListButtons}>
+                    <p className={styles.taskListButtonsRowEnd}>
                         <span
                             className={styles.taskListButtonsItem}
                         >
@@ -70,7 +87,7 @@ const Task = ({ taskData }) => {
                     </div>
                 )}
 
-            </div>
+            </div >
         </>
     );
 }

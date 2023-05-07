@@ -4,8 +4,6 @@ import styles from '../styles/Home.module.css';
 
 const getTaskList = (taskListJSON) => {
 
-    console.log("taskListJSON", taskListJSON);
-
     const taskList = [];
 
     taskListJSON.forEach(task => {
