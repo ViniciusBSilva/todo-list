@@ -1,23 +1,25 @@
 import TaskForm from '@/components/TaskForm';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from '@/styles/Home.module.css';
 
-const taskCreate = () => {
+const taskEdit = () => {
 
-    const state = {
-        "title": "",
-        "description": "",
-        "completed": false,
-        "category": "",
-        "dueDate": "",
-        "createdAt": "",
-        "createdBy": ""
-    }
-
-    const [taskData, setTaskData] = useState(state);
+    const [taskData, setTaskData] = useState({});
     const [isPending, setIsPending] = useState(false);
     const router = useRouter();
+
+    const { id } = router.query;
+
+    useEffect(() => {
+        if (id) {
+            fetch(`http://localhost:3000/api/tasks?id=${id}`)
+                .then(res => res.json())
+                .then(jsonData => {
+                    setTaskData(jsonData)
+                });
+        }
+    }, [id]);
 
     const handleInputChange = ({ target }) => {
 
@@ -49,12 +51,11 @@ const taskCreate = () => {
 
         const newTaskData = {
             ...taskData,
-            "createdAt": currentDate,
             "changedAt": currentDate,
         };
 
-        fetch(`http://localhost:3000/api/tasks`, {
-            method: "POST",
+        fetch(`http://localhost:3000/api/tasks?id=${id}`, {
+            method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newTaskData)
         })
@@ -68,7 +69,7 @@ const taskCreate = () => {
 
     return (
         <>
-            <h1 className={styles.title}>New Task</h1>
+            <h1 className={styles.title}>Edit Task</h1>
             <TaskForm
                 taskData={taskData}
                 handleInputChange={handleInputChange}
@@ -81,4 +82,4 @@ const taskCreate = () => {
 
 
 
-export default taskCreate;
+export default taskEdit;

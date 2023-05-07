@@ -11,7 +11,7 @@ const TaskDetailsPage = () => {
     const [taskData, setTaskData] = useState({});
 
     const handleEdit = () => {
-
+        router.replace(`/tasks/edit?id=${id}`);
     }
 
     const handleDelete = () => {

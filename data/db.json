@@ -13,14 +13,14 @@
     },
     {
       "id": 2,
-      "title": "The Quick Brown Fox",
-      "description": "The quick brown fox jumps over the lazy dog",
-      "completed": true,
-      "category": "Personal",
-      "dueDate": "2023-12-31",
+      "title": "The Quick Brown Fox 2",
+      "description": "The quick brown fox jumps over the lazy dog 2",
+      "completed": false,
+      "category": "Personal 2",
+      "dueDate": "2023-12-25",
       "createdAt": "2023-04-22",
-      "createdBy": "Vinicius",
-      "changedAt": "2023-04-22"
+      "createdBy": "Vinicius 2",
+      "changedAt": "2023-05-07"
     }
   ]
 }
