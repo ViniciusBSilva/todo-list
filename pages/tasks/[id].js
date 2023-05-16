@@ -3,6 +3,7 @@ import TaskDetailView from "@/components/TaskDetailView";
 import styles from '@/styles/Home.module.css';
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { FiEdit2, FiTrash } from "react-icons/fi"
 
 const TaskDetailsPage = () => {
 
@@ -43,8 +44,8 @@ const TaskDetailsPage = () => {
                 taskData={taskData}
             />
             <div className={styles.taskForm + ' ' + styles.taskFormButtonLine}>
-                <button className={styles.btnNormal} onClick={() => handleEdit()}>Edit task</button>
-                <button className={styles.btnNormal} onClick={() => handleDelete()}>Delete task</button>
+                <button className={styles.btnNormal} onClick={() => handleEdit()}><FiEdit2 /> Edit task</button>
+                <button className={styles.btnNormal} onClick={() => handleDelete()}><FiTrash /> Delete task</button>
             </div>
 
         </>

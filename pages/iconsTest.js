@@ -1,7 +1,7 @@
 import {
     FiSave, FiTag, FiStar, FiCopy, FiArchive, FiAlertCircle, FiGrid, FiList,
     FiLoader, FiRefreshCw, FiTrash, FiX, FiXCircle, FiCalendar, FiPlusSquare,
-    FiMinusSquare, FiArrowUpRight, FiCircle, FiCheckCircle
+    FiMinusSquare, FiArrowUpRight, FiCircle, FiCheckCircle, FiEdit, FiEdit3, FiEdit2, FiFile
 } from "react-icons/fi";
 
 import styles from '../styles/IconsTest.module.css'
@@ -35,6 +35,18 @@ const IconsTest = () => {
 
                 <dt className={styles.term}><FiCopy /></dt>
                 <dd className={styles.description}>FiCopy</dd>
+
+                <dt className={styles.term}><FiEdit /></dt>
+                <dd className={styles.description}>FiEdit</dd>
+
+                <dt className={styles.term}><FiEdit2 /></dt>
+                <dd className={styles.description}>FiEdit2</dd>
+
+                <dt className={styles.term}><FiEdit3 /></dt>
+                <dd className={styles.description}>FiEdit3</dd>
+
+                <dt className={styles.term}><FiFile /></dt>
+                <dd className={styles.description}>FiFile</dd>
 
                 <dt className={styles.term}><FiGrid /></dt>
                 <dd className={styles.description}>FiGrid</dd>

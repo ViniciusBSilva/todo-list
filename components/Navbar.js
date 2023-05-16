@@ -11,6 +11,7 @@ const Navbar = () => {
                 </Link>
             </div>
             <Link href="/">Home</Link>
+            <Link href="/categories">Categories</Link>
             <Link className="navButton" href="/tasks/create">New Task</Link>
         </nav>
     );

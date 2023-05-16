@@ -1,4 +1,6 @@
 import styles from '@/styles/Home.module.css';
+import { FiSave, FiX } from "react-icons/fi"
+
 const TaskForm = ({ taskData, handleInputChange, handleSubmit, handleCancel, isPending }) => {
     return (
         <div className={styles.taskFormContainer}>
@@ -67,9 +69,9 @@ const TaskForm = ({ taskData, handleInputChange, handleSubmit, handleCancel, isP
                     ' ' +
                     styles.taskFormButtonLine}
                 >
-                    {!isPending && <button className={styles.btnHighlight}>Save</button>}
+                    {!isPending && <button className={styles.btnHighlight}><FiSave /> Save</button>}
                     {isPending && <button className={styles.btnHighlight} disabled>Saving...</button>}
-                    <button type='reset' className={styles.btnNormal}>Cancel</button>
+                    <button type='reset' className={styles.btnNormal}><FiX /> Cancel</button>
                 </p>
             </form>
         </div>
