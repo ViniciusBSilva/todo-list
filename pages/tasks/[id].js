@@ -37,7 +37,7 @@ const TaskDetailsPage = () => {
     return (
         <>
             <Head>
-                <title>To-do List | View Task # {id}</title>
+                <title>TODOLIST | View Task # {id}</title>
             </Head>
             <TaskDetailView
                 taskData={taskData}

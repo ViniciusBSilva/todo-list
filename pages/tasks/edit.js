@@ -75,7 +75,7 @@ const taskEdit = () => {
     return (
         <>
             <Head>
-                <title>To-do List | Edit Task # {id}</title>
+                <title>TODOLIST | Edit Task # {id}</title>
             </Head>
             <h1 className={styles.title}>Edit Task</h1>
             <TaskForm
