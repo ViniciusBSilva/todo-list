@@ -1,0 +1,36 @@
+/* 
+
+    The list now appears as if the items were placed in a table 
+
+    https://www.the-art-of-web.com/css/format-dl/
+
+*/
+
+.list {
+    /* border: 3px double #ccc; */
+    /* padding: 0.5em; */
+}
+
+.term,
+.description {
+    font-size: 18px;
+}
+
+.term {
+    float: left;
+    clear: left;
+    /* width: 100px; */
+    text-align: right;
+    font-weight: bold;
+    /* color: green; */
+    /* font-size: 22px; */
+}
+
+/* .term::after {
+    content: ":";
+} */
+
+.description {
+    margin: 0 0 0 50px;
+    padding: 0 0 0.5em 0;
+}

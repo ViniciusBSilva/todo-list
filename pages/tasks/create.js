@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import TaskForm from '@/components/TaskForm';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -72,6 +73,9 @@ const taskCreate = () => {
 
     return (
         <>
+            <Head>
+                <title>To-do List | New Task</title>
+            </Head>
             <h1 className={styles.title}>New Task</h1>
             <TaskForm
                 taskData={taskData}

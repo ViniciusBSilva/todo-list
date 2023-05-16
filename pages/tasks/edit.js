@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import TaskForm from '@/components/TaskForm';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -73,6 +74,9 @@ const taskEdit = () => {
 
     return (
         <>
+            <Head>
+                <title>To-do List | Edit Task # {id}</title>
+            </Head>
             <h1 className={styles.title}>Edit Task</h1>
             <TaskForm
                 taskData={taskData}

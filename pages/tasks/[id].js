@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import TaskDetailView from "@/components/TaskDetailView";
 import styles from '@/styles/Home.module.css';
 import { useRouter } from "next/router";
@@ -35,6 +36,9 @@ const TaskDetailsPage = () => {
 
     return (
         <>
+            <Head>
+                <title>To-do List | View Task # {id}</title>
+            </Head>
             <TaskDetailView
                 taskData={taskData}
             />
