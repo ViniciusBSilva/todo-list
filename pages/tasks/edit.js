@@ -69,7 +69,12 @@ const taskEdit = () => {
     }
 
     const handleCancel = () => {
-        router.replace(`/tasks/${id}`);
+
+        if (confirm("Are you sure you want to leave without saving? \n\n" +
+            "Unsaved data will be lost!")) {
+            router.replace(`/tasks/${id}`);
+        }
+
     }
 
     return (

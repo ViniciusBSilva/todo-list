@@ -68,7 +68,10 @@ const taskCreate = () => {
     }
 
     const handleCancel = () => {
-        router.back();
+        if (confirm("Are you sure you want to leave without saving? \n\n" +
+            "Data will be lost!")) {
+            router.back();
+        }
     }
 
     return (

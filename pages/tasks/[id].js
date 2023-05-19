@@ -18,13 +18,14 @@ const TaskDetailsPage = () => {
 
     const handleDelete = () => {
 
-        fetch(`http://localhost:3000/api/tasks?id=${id}`, {
-            method: "DELETE"
-        }).then(() => {
-            console.log('Task Deleted');
-            router.replace("/")
-        })
-
+        if (confirm("Are you sure you want to delete this task? \n\nThis action can not be undone!")) {
+            fetch(`http://localhost:3000/api/tasks?id=${id}`, {
+                method: "DELETE"
+            }).then(() => {
+                console.log('Task Deleted');
+                router.replace("/")
+            })
+        }
     }
 
     useEffect(() => {
