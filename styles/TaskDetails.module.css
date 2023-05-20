@@ -1,0 +1,13 @@
+/* .detailsContainer {} */
+
+.description {
+    background-color: var(--000);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* .dueDate {} */
+
+.info {
+    font-size: small;
+}

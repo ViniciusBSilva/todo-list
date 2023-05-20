@@ -9,8 +9,13 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { FiCircle } from "react-icons/fi";
 import { FiCheckCircle } from "react-icons/fi";
 
+import { FaTag } from "react-icons/fa";
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Task.module.css'
+
+import Icon from './Icon';
+import ClickableIcon from './ClickableIcon';
+import TaskDetails from './TaskDetails';
 
 const Task = ({ taskData }) => {
 
@@ -35,60 +40,76 @@ const Task = ({ taskData }) => {
     }
 
     return (
-        <>
-            <div className={styles.task}>
-                <div className={styles.taskHeader}>
-                    {/* <input
-                        name='taskCompleted'
-                        type='checkbox'
-                        className={styles.taskCheckboxOverrideIcon}
-                        checked={isCompleted}
-                        disabled={isPending}
-                        onChange={(event) => handleCompleted(event.target.checked)}
-                    /> */}
-                    <p className={styles.taskListButtonsRowBegin}>
-                        <span
-                            className={styles.taskListButtonsItem}
+        <div className={styles.container}>
+
+            <div className={styles.taskHeader}>
+
+                <div className={styles.line}>
+
+                    <div className={styles.lineBegin}>
+                        <ClickableIcon
                             onClick={() => handleCompleted(!isCompleted)}
                         >
-                            {
-                                isCompleted ?
-                                    <FiCheckCircle /> :
-                                    <FiCircle />
-                            }
-                        </span>
-                    </p>
-                    <label
-                        htmlFor='taskCompleted'
-                        className={`${styles.taskTitle}`.concat((isCompleted) ? ` ${styles.taskCompleted}` : '')}>
-                        <h2>{taskData.title}</h2>
-                    </label>
-                    <p className={styles.taskListButtonsRowEnd}>
-                        <span
-                            className={styles.taskListButtonsItem}
-                        >
-                            <Link href={`tasks/${taskData.id}`}>
+                            {isCompleted ? <FiCheckCircle /> : <FiCircle />}
+                        </ClickableIcon>
+                    </div>
+
+                    <div className={styles.titleContainer}>
+                        <label
+                            htmlFor='taskCompleted'
+                            className={isCompleted && ` ${styles.completedTitle}`}>
+                            <h2>{taskData.title}</h2>
+                        </label>
+                    </div>
+
+                    <div className={styles.lineEnd}>
+                        <Link href={`tasks/${taskData.id}`}>
+                            <ClickableIcon>
                                 <FiArrowUpRight />
-                            </Link>
-                        </span>
-                        <span
-                            className={styles.taskListButtonsItem}
+                            </ClickableIcon>
+                        </Link>
+
+                        <ClickableIcon
                             onClick={() => toogleDetail(!showDetail)}
                         >
                             {showDetail ? <FiMinusSquare /> : <FiPlusSquare />}
-                        </span>
-                    </p>
-                </div>
-                {showDetail && (
-                    <div className={styles.taskDetails}>
-                        <p className={styles.taskDescription}>{taskData.description}</p>
-                        <p className={styles.taskDueDate}>Due Date: {taskData.dueDate}</p>
-                        <p className={styles.taskInfo}>Created at {taskData.createdAt} by {taskData.createdBy}</p>
+                        </ClickableIcon>
                     </div>
-                )}
 
-            </div >
-        </>
+                </div>
+
+                <div className={styles.line}>
+
+                    <div className={styles.lineBegin}>
+                        <Icon
+                            style={{
+                                fontSize: '20px',
+                                color: 'red'
+                            }}
+                        >
+                            <FaTag />
+                        </Icon>
+                    </div>
+
+                    <div className={styles.category}>
+                        {taskData.category}
+                    </div>
+
+                </div>
+
+            </div>
+
+            {
+                showDetail &&
+                <TaskDetails
+                    description={taskData.description}
+                    dueDate={taskData.dueDate}
+                    createdAt={taskData.createdAt}
+                    createdBy={taskData.createdBy}
+                />
+            }
+
+        </div>
     );
 }
 

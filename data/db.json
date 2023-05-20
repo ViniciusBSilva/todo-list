@@ -16,11 +16,33 @@
       "title": "The Quick Brown Fox 2",
       "description": "The quick brown fox jumps over the lazy dog 2",
       "completed": true,
-      "category": "Personal 2",
+      "category": "Personal",
       "dueDate": "2023-12-25",
       "createdAt": "2023-04-22",
       "createdBy": "Vinicius 2",
       "changedAt": "2023-05-07"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Work",
+      "color": "blue"
+    },
+    {
+      "id": 2,
+      "name": "Personal",
+      "color": "red"
+    },
+    {
+      "id": 3,
+      "name": "Study",
+      "color": "green"
+    },
+    {
+      "name": "Health",
+      "color": "yellow",
+      "id": 4
     }
   ]
 }

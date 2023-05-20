@@ -1,0 +1,37 @@
+.container {
+    background-color: var(--100);
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.line {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lineBegin {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.lineEnd {
+    margin-right: 5px;
+    margin-left: auto;
+}
+
+.titleContainer {
+    margin-left: 5px;
+}
+
+.completedTitle {
+    text-decoration: line-through;
+}
+
+.category {
+    font-size: 18px;
+    font-weight: bold;
+}

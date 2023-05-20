@@ -4,6 +4,9 @@ import {
     FiMinusSquare, FiArrowUpRight, FiCircle, FiCheckCircle, FiEdit, FiEdit3, FiEdit2, FiFile
 } from "react-icons/fi";
 
+import { BsTagFill } from "react-icons/bs";
+import { FaTag } from "react-icons/fa";
+
 import styles from '../styles/IconsTest.module.css'
 
 /* Icons from https://react-icons.github.io/react-icons/icons?name=fi */
@@ -83,6 +86,12 @@ const IconsTest = () => {
 
                 <dt className={styles.term}><FiXCircle /></dt>
                 <dd className={styles.description}>FiXCircle</dd>
+
+                <dt className={styles.term}><BsTagFill /></dt>
+                <dd className={styles.description}>BsTagFill</dd>                
+
+                <dt className={styles.term}><FaTag /></dt>
+                <dd className={styles.description}>BsTagFill</dd>                
             </dl>
         </>
     );

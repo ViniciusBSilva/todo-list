@@ -17,61 +17,14 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     border-radius: 5px;
 }
 
-.task {
-    background-color: var(--100);
-    margin: 10px 0px;
-    padding: 10px;
-    border-radius: 10px;
-}
-
 .taskHeader {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.taskListButtonsRowEnd {
-    margin-right: 5px;
-    margin-left: auto;
-    /* color: white; */
-    font: 25px bolder;
-    cursor: pointer;
-}
-
-.taskListButtonsRowBegin {
-    margin-right: 5px;
-    margin-left: 5px;
-    /* color: white; */
-    font: 25px bolder;
-    cursor: pointer;
-}
-
 .taskListButtonsItem {
     margin: 2px;
-}
-
-.taskTitle {
-    /* color: white; */
-}
-
-.taskCompleted {
-    text-decoration: line-through;
-    /* color: white; */
-    /* font-weight: 300; */
-}
-
-.taskDescription {
-    background-color: var(--000);
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.taskDueDate {
-    /* color: var(--000); */
-}
-
-.taskInfo {
-    font-size: small;
 }
 
 .taskDetailPropertyList {

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import TaskDetailView from "@/components/TaskDetailView";
+import TaskDetailedView from "@/components/TaskDetailedView";
 import styles from '@/styles/Home.module.css';
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -41,7 +41,7 @@ const TaskDetailsPage = () => {
             <Head>
                 <title>TODOLIST | View Task # {id}</title>
             </Head>
-            <TaskDetailView
+            <TaskDetailedView
                 taskData={taskData}
             />
             <div className={styles.taskForm + ' ' + styles.taskFormButtonLine}>
