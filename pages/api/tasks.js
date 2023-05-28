@@ -10,7 +10,9 @@ const handler = async (req, res) => {
   }
 
   try {
+
     let response;
+
     if (req.method === "GET") {
       response = await fetch(uri);
     } else if (req.method === "POST" || req.method === "PUT" || req.method === "PATCH") {
@@ -27,6 +29,7 @@ const handler = async (req, res) => {
 
     const data = await response.json();
     res.status(200).json(data);
+
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Server error' });

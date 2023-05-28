@@ -21,6 +21,61 @@
       "createdAt": "2023-04-22",
       "createdBy": "Vinicius 2",
       "changedAt": "2023-05-07"
+    },
+    {
+      "title": "Learn SCSS",
+      "description": "Learn how to create a dark mode",
+      "completed": false,
+      "category": "Study",
+      "dueDate": "2023-06-09",
+      "createdAt": "2023-05-28",
+      "createdBy": "Vinicius",
+      "changedAt": "2023-05-28",
+      "id": 3
+    },
+    {
+      "title": "Drink more water",
+      "description": "",
+      "completed": false,
+      "category": "Health",
+      "dueDate": "2023-12-31",
+      "createdAt": "2023-05-28",
+      "createdBy": "Vinicius",
+      "changedAt": "2023-05-28",
+      "id": 4
+    },
+    {
+      "title": "Walk on the treadmill",
+      "description": "At least 1hr per day",
+      "completed": false,
+      "category": "Fitness",
+      "dueDate": "2023-06-30",
+      "createdAt": "2023-05-28",
+      "createdBy": "Vinicius",
+      "changedAt": "2023-05-28",
+      "id": 5
+    },
+    {
+      "title": "Give Paquita's medicine ",
+      "description": "",
+      "completed": false,
+      "category": "Pet",
+      "dueDate": "2023-05-31",
+      "createdAt": "2023-05-28",
+      "createdBy": "Vinicius",
+      "changedAt": "2023-05-28",
+      "id": 6
+    },
+    {
+      "title": "Think of new programming projects",
+      "description": "",
+      "completed": false,
+      "category": "Projects",
+      "dueDate": "2023-06-10",
+      "createdAt": "2023-05-28",
+      "createdBy": "Vinicius",
+      "changedAt": "2023-05-28",
+      "id": 7
     }
   ],
   "categories": [
@@ -43,6 +98,21 @@
       "name": "Health",
       "color": "yellow",
       "id": 4
+    },
+    {
+      "name": "Fitness",
+      "color": "white",
+      "id": 5
+    },
+    {
+      "name": "Pet",
+      "color": "purple",
+      "id": 6
+    },
+    {
+      "name": "Projects",
+      "color": "#ff00dd",
+      "id": 7
     }
   ]
 }

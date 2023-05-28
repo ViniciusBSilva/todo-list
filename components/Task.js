@@ -9,13 +9,11 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { FiCircle } from "react-icons/fi";
 import { FiCheckCircle } from "react-icons/fi";
 
-import { FaTag } from "react-icons/fa";
-
 import styles from '../styles/Task.module.css'
 
-import Icon from './Icon';
 import ClickableIcon from './ClickableIcon';
 import TaskDetails from './TaskDetails';
+import Category from './Category';
 
 const Task = ({ taskData }) => {
 
@@ -81,18 +79,9 @@ const Task = ({ taskData }) => {
                 <div className={styles.line}>
 
                     <div className={styles.lineBegin}>
-                        <Icon
-                            style={{
-                                fontSize: '20px',
-                                color: 'red'
-                            }}
-                        >
-                            <FaTag />
-                        </Icon>
-                    </div>
-
-                    <div className={styles.category}>
-                        {taskData.category}
+                        <Category
+                            name={taskData.category}
+                        />
                     </div>
 
                 </div>

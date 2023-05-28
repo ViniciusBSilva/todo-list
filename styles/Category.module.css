@@ -1,0 +1,13 @@
+.category {
+    display: flex;
+}
+
+.icon {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+}
