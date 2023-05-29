@@ -5,28 +5,38 @@ import { FaTag } from "react-icons/fa";
 
 import styles from '../styles/Category.module.css'
 
-const Category = ({ name }) => {
+const Category = ({ name, color }) => {
 
     const [category, setCategory] = useState({
         name,
-        color: "black",
+        color
     });
 
     useEffect(() => {
 
-        fetch(`http://localhost:3000/api/categories?name=${name}`)
-            .then(res => res.json())
-            .then(jsonData => {
-                const jsonCategory = jsonData[0];
-                if (jsonCategory) {
-                    if (jsonCategory.name) {
-                        setCategory({ category, name: jsonCategory.name });
+        if (!color) {
+
+            fetch(`http://localhost:3000/api/categories?name=${name}`)
+                .then(res => res.json())
+                .then(jsonData => {
+                    const jsonCategory = jsonData[0];
+                    if (jsonCategory) {
+                        if (jsonCategory.name) {
+                            setCategory({
+                                category,
+                                name: jsonCategory.name
+                            });
+                        }
+                        if (jsonCategory.color) {
+                            setCategory({
+                                category,
+                                color: jsonCategory.color
+                            });
+                        }
                     }
-                    if (jsonCategory.color) {
-                        setCategory({ category, color: jsonCategory.color });
-                    }
-                }
-            });
+                });
+
+        }
 
     }, [])
 

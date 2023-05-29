@@ -97,3 +97,10 @@ https://www.canva.com/colors/color-palettes/mermaid-lagoon/
     background-color: var(--300);
     color: var(--000);
 }
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+.container {
+    display: flex;
+}
