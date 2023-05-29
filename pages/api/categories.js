@@ -23,6 +23,9 @@ const handler = async (req, res) => {
 
         switch (req.method) {
             case "GET":
+                if (!id && !name) {
+                    uri += "?_sort=name&_order=asc"
+                }
                 response = await fetch(uri);
                 break;
             case "POST":
