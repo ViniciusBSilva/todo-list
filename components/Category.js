@@ -38,7 +38,7 @@ const Category = ({ name, color }) => {
 
         }
 
-    }, [])
+    }, [name, color])
 
     return (
         <div className={styles.category}>
