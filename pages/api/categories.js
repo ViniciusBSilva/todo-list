@@ -21,10 +21,25 @@ const handler = async (req, res) => {
 
         let response;
 
-        if (req.method === "GET") {
-            response = await fetch(uri);
+        switch (req.method) {
+            case "GET":
+                response = await fetch(uri);
+                break;
+            case "POST":
+            case "PUT":
+            case "PATCH":
+                response = await fetch(uri, {
+                    method: req.method,
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(req.body)
+                });
+                break;
+            case "DELETE":
+                response = await fetch(uri, {
+                    method: req.method,
+                });
+                break;
         }
-
 
         const data = await response.json();
         res.status(200).json(data);

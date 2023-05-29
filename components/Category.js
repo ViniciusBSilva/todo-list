@@ -7,23 +7,30 @@ import styles from '../styles/Category.module.css'
 
 const Category = ({ name }) => {
 
-    const [category, setCategory] = useState({});
+    const [category, setCategory] = useState({
+        name,
+        color: "black",
+    });
 
     useEffect(() => {
 
         fetch(`http://localhost:3000/api/categories?name=${name}`)
             .then(res => res.json())
             .then(jsonData => {
-
-                console.log("jsonData[0]", jsonData[0]);
-                setCategory(jsonData[0])
+                const jsonCategory = jsonData[0];
+                if (jsonCategory) {
+                    if (jsonCategory.name) {
+                        setCategory({ category, name: jsonCategory.name });
+                    }
+                    if (jsonCategory.color) {
+                        setCategory({ category, color: jsonCategory.color });
+                    }
+                }
             });
 
     }, [])
-    console.log("category", category);
-    console.log("category.color", category.color);
+
     return (
-        category &&
         <div className={styles.category}>
             <div className={styles.icon}>
                 <Icon

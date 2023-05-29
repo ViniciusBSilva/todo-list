@@ -76,6 +76,17 @@
       "createdBy": "Vinicius",
       "changedAt": "2023-05-28",
       "id": 7
+    },
+    {
+      "title": "Learn Next.JS basics",
+      "description": "",
+      "completed": false,
+      "category": "React",
+      "dueDate": "2023-07-08",
+      "createdAt": "2023-05-29",
+      "createdBy": "Vinicius",
+      "changedAt": "2023-05-29",
+      "id": 8
     }
   ],
   "categories": [
@@ -113,6 +124,11 @@
       "name": "Projects",
       "color": "#ff00dd",
       "id": 7
+    },
+    {
+      "name": "React",
+      "color": "GoldenRod",
+      "id": 8
     }
   ]
 }
