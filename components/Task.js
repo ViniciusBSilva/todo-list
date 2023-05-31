@@ -55,7 +55,7 @@ const Task = ({ taskData }) => {
                     <div className={styles.titleContainer}>
                         <label
                             htmlFor='taskCompleted'
-                            className={isCompleted && ` ${styles.completedTitle}`}>
+                            className={isCompleted && ` ${styles.completedTitle}`}>     // TODO: Check
                             <h2>{taskData.title}</h2>
                         </label>
                     </div>

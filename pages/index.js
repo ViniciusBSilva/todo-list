@@ -1,8 +1,5 @@
 import Head from 'next/head';
-import TaskList from '@/components/TaskList';
-import Sidebar from "@/components/CategorieList";
-
-import styles from '@/styles/Home.module.css';
+import Content from '@/components/Content';
 
 export default function Home() {
 
@@ -14,10 +11,9 @@ export default function Home() {
         {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main className={styles.container}>
-        <Sidebar />
-        <TaskList />
-      </main>
+
+      <Content />
+
     </>
   )
 }

@@ -1,8 +1,8 @@
-import styles from "@/styles/CategorieList.module.css";
+import styles from "@/styles/CategoryList.module.css";
 import { useEffect, useState } from "react";
 import Category from "./Category";
 
-const Sidebar = () => {
+const CategoryList = () => {
 
     const getCategoriesList = (categoriesListJSON) => {
         const categoriesList = [];
@@ -35,4 +35,4 @@ const Sidebar = () => {
     );
 }
 
-export default Sidebar;
+export default CategoryList;
